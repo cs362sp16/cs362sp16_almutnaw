@@ -1,2 +1,3 @@
 I refactored 5 cards and made each individuale one of them into a seperate function so it'll be easy to read.
 The cards that I've changed were: Adventure, council_room, mine, remodel and smithy.
+The way I refactored the code was by taking all the implementation of each card and creating a function of the card without any perameters and then paste the code inside the function. After that I start adding the required perameters so I don't need to have more than I need. Then I just called the function from the switch statement. 
