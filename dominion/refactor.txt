@@ -1,0 +1,2 @@
+I refactored 5 cards and made each individuale one of them into a seperate function so it'll be easy to read.
+The cards that I've changed were: Adventure, council_room, mine, remodel and smithy.
