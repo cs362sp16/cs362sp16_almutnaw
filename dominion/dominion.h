@@ -79,6 +79,9 @@ struct gameState {
 struct gameState* newGame();
 void myAssert(int x, char* msg);
 int getCost(int cardNumber);
+int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus);
+
+
 int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 		  int k8, int k9, int k10);
 
