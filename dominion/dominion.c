@@ -308,6 +308,14 @@ int buyCard(int supplyPos, struct gameState *state) {
   return 0;
 }
 
+void myAssert(int x, char* msg){
+
+  if (x == 0)
+  {
+      printf("%s\n", msg );
+  }
+} 
+
 int numHandCards(struct gameState *state) {
   return state->handCount[ whoseTurn(state) ];
 }

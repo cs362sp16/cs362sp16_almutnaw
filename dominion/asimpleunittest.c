@@ -6,7 +6,9 @@ int myassert(int b,char* msg) {
   if (b == 0) {
     printf("FAILED ASSERTION: %s\n",msg);
     failed = 1;
+    return 1;
   }
+  return 0;
 }
 
 void checkasserts() {
