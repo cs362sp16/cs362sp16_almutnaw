@@ -1,0 +1,3 @@
+My unit text effort wasn't the best. I think that there are a lot of things that still I haven't tested yet.
+Also, I found out that it'a really hard to test a bad documented code like this one because I had to understand the function completly to make a really good unit test.
+But I'll make my best to be able to test functions in many ways in the future.
