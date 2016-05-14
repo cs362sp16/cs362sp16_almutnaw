@@ -15,6 +15,27 @@ playdom: dominion.o playdom.c
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
+runAdventurer: adventurer
+	./randomtestadventurer &> randomtestadventurer.out
+	gcov dominion.c >> randomtestadventurer.out
+	cat dominion.c.gcov >> randomtestadventurer.out
+
+randomcard1:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomTestCard1.c rngs.c -o randomtestcard -lm -g
+
+runRandomCard: randomcard1
+	./randomtestcard &> randomtestcard.out
+	gcov dominion.c >> randomtestcard.out
+	cat dominion.c.gcov >> randomtestcard.out
+
+randomcard2:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c -o randomtestcard2 -lm -g
+
+runRandomCard: randomcard2
+	./randomtestcard2 &> randomtestcard2.out
+	gcov dominion.c >> randomtestcard2.out
+	cat dominion.c.gcov >> randomtestcard2.out
+
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
