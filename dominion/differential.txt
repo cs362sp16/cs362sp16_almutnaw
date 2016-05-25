@@ -1,0 +1,15 @@
+Assignment 4 - 3
+
+The differences between the two games begin manifesting themselves as differences between the cards in the players hands.
+This is seen in the first instance where the player does not have a village-smithy combination -- they only have the smithy component. 
+These changes in available actions then change the number of coins available, changing what is subsequently purchased. 
+Thus, the differences in the each version of the game continues to grow from this point.
+
+The line number where the difference occurred can be used to calculate when in the execution of the program the difference occurred.
+With this, we can examine the state of the game directly prior to this spot to hopefully see what internal difference caused the difference.
+Pinpointing the bug that caused the difference in the drawn hand with only the play-by-play output of the game is difficult, because it only lets us know what actions were taken.
+To truly know why these actions resulted in an error we need to know not just what action was taken, but what environment the action was taken in.
+
+The length of the difference file also provides insight into the level of difference between the two game runs.
+
+for the code coverage result, my test ended up with 80% test coverage when my classmate got 60%. This show that my test has a better code coverage and that help to decide who code is correct. 
