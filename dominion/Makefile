@@ -39,6 +39,14 @@ runRandomCard: randomcard2
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
+testdominion: dominion.c testdominion.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+
+testdominion.out: testdominion
+	./testdominion 10 gameResults.out &> testdominion.out
+	gcov dominion.c >> testdominion.out
+	cat dominion.c.gcov >> testdominion.out
+
 all: adventurer playdom player 
 
 clean:
