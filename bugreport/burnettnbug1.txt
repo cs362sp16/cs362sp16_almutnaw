@@ -1,0 +1,12 @@
+TO: 
+	Nathan Burnett
+	burnettn
+
+SUMMARY:
+	Didn't test multiple players with the same card
+
+SEVERITY: 
+	Critical	
+
+DETAILS:
+	In the unit test for Village card there wasn't any test for multiple players using the same card and with that there might be a bug that hasn't been discovered.

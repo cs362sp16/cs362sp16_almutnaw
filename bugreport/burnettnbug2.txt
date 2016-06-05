@@ -1,0 +1,12 @@
+TO: 
+	Nathan Burnett
+	burnettn
+
+SUMMARY:
+	Didn't test with multiple inputs
+
+SEVERITY: 
+	Critical	
+
+DETAILS:
+	In the unit test for great_hall card there was only one test for one number constant number of inputs. There should be multiple tests on the card and each one should have different set of inputs to make sure the card work properly.

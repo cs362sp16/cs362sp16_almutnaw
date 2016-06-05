@@ -1,0 +1,12 @@
+TO: 
+	Nathan Burnett
+	burnettn
+
+SUMMARY:
+	Didn't count the number of cards in hand.
+
+SEVERITY: 
+	Critical	
+
+DETAILS:
+	In the unit test of smithy card. The test didn't check the number of cards in hand before calling the card and count the hand again after the card call to see if there is any change.
