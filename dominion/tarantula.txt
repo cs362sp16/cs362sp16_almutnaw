@@ -1,0 +1,23 @@
+Writing tarantula program was a fun experience but in the same time it was challenging. It took me a lot of time to parse the right information out of the gcov output.
+I didn't expect to spend a whole night to write the programe but I faced a couple challenges that caused me to spend more time than I intecipated. 
+But overall it was a great learning experience for me.
+
+# Application Summary
+I wrote the tarantula program in Python 3, utilizing the getopt and shelve libraries.
+I choose Python because it's easier to work with parsing strings from files. It helped me parsing all the information that I needed from gcov files.
+
+
+The application is not complete to the level I want it to be.
+It currently is lacking some input error handling, help messages, and assumes all gcov files are associated with the same source file.
+However, these drawbacks are more than acceptable to be used to debug a single project like our dominion implementation.
+(Perhaps someday I'll spend some time cleaning up the application, since I had a lot of fun writing it).
+
+I used the tarantula program to try to localize faults within the scoreFor function, but with inconclusive results.
+I discovered that tests must be written with tarantula in mind for them to be at their most effective.
+This generally entales attempting to step through all permutations of branching paths through a piece of code.
+After some wrangling, I was able to produce results showing that the third branch, the one containing the calculation of the score within the deck had a higher suspiciousness when unit tests which had one of hand, discard, or deck be empty.
+This was because the cases where deck was supposed to not be run were still being run, generating extra failure states, and the cases where only deck were being run also failed.
+
+Through all of this process, I learned that tarantula is a useful method for finding logic errors, but it can only isolate individual branches, not lines.
+Additionally, its usefulness is hampered if the unit tests are not written to explicity cover all branches of a program.
+However, when these aspects line up, tarantula can be a quick and interesting way of isolating faulty branches very quickly via automated testing.
