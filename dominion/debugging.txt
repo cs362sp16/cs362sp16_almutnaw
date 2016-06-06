@@ -1,0 +1,4 @@
+Debugging a segfault in TestAdventure.cpp.
+
+
+When I was testing Adventure card I ended up with a segfault that took me while to solve. I found out that hand count variable wasn’t initialized correctly and that cause the program to loop more times than the size of hand array. The way I was able to solve this bug was through gdp. I ran gap on the program and made bunch of break points and every time I stop at a break point I print the value of all the variables to see if they were what I expect and when I got to the loop of hand array I found that hand count variable has a wrong value than what I expected and traced the value change until I found that I initialized it in a wrong way.
